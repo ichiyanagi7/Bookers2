@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-lg-5 mx-auto">
+      <h2>User info</h2>
+
+      <%= form_with model:@user, local:true do |f| %>
+      <div class="form-group">
+        <label for="inputName">Name</label>
+        <%= f.text_field :name, autofocus: true, id:"inputName" ,class:"form-control" %>
+      </div>
+
+      <div class="form-group">
+        <label for="inputBody">Introduction</label>
+        <%= f.text_area :body, autofocus: true, id:"inputBody" ,class:"form-control" %>
+      </div>
+
+        <%= f.submit "Update User" %>
+      <% end %>
+    </div>
+  </div>
+</div>

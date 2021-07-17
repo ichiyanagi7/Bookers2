@@ -31,3 +31,10 @@ div .field,
 div .actions{
  margin-bottom:10px;
 }
+
+
+//入力欄をユーザーが任意に変更できる
+textarea{
+ overflow:auto;
+ resize:vertical;
+}
