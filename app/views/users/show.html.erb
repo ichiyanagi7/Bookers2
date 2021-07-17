@@ -1,17 +1,45 @@
 <div class="container">
 
-  <div class="row-lg-4">
-    <div class="col">
+  <div class="row">
+    <div class="col-md-3">
       <h1>User info</h1>
-    </div>
+      <%= attachment_image_tag @user, :profile_image, :fill, 100, 100 %>
 
-    <div class="col">
+
+      <table class="table">
+        <tbody>
+          <tr>
+            <th scope="row">name</th>
+            <th>
+              <%= @user.name %>
+            </th>
+          </tr>
+
+          <tr>
+            <th scope="row">introduction</th>
+            <th>
+              <%= @user.body %>
+            </th>
+          </tr>
+        </tbody>
+      </table>
+
+
+      <!--プロフィール編集ボタン-->
+
+
       <h1>New book</h1>
-    </div>
-  </div>
 
-  <div class="row-lg-8">
-    <div class="col">
+      <!--クリエイト欄-->
+
+
+
+
+    </div>
+
+
+
+    <div class="col-md-8">
       <h2>Books</h2>
 
       <table class="table">
