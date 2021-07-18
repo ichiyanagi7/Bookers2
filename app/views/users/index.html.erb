@@ -1,1 +1,43 @@
-<h1>user index画面</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <%= render "books/userinfo",user:@user %>
+    </div>
+
+
+    <!--右側内容-->
+
+    <div class="col-md-8 offset-md-1">
+      <h2>Users</h2>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>image</th>
+            <th>name</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+
+        <% @users.each do |user| %>
+        <tbody>
+          <tr>
+            <td>
+              <%= attachment_image_tag user,:profile_image, :fill, 40, 40, format: 'jpeg', fallback: "no_image.jpg" %>
+            </td>
+
+            <td>
+              <%= user.name %>
+            </td>
+
+            <td>
+              <%= link_to "show",user_path(user) %>
+            </td>
+          </tr>
+        </tbody>
+
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>
